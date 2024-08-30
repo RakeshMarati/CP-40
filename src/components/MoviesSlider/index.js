@@ -10,17 +10,13 @@ const MoviesSlider = props => {
   console.log(moviesList)
   const settings = {
     dots: false,
-    infinite: true,
-    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
   }
   return (
     <Slider {...settings}>
       {moviesList.map(eachItem => (
-        <div key={eachItem.id}>
-          <MovieItem movieItem={eachItem} />
-        </div>
+        <MovieItem key={eachItem.id} movieItem={eachItem} />
       ))}
     </Slider>
   )
